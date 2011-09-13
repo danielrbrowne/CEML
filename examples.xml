@@ -1,0 +1,173 @@
+
+<!-- *** Examples for the recommended usage and file layout for specifying simulations using CEML *** -->
+
+<!-- *** (These specific examples are designed with the Loughborough Wave Lab iPhone app in mind) *** -->
+
+<feed>
+
+	<simulation>
+		<simtitle>iPhone Example</simtitle>
+		<nodesx>246</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+        
+        <pulse>
+            <xpos>160</xpos>
+            <ypos>240</ypos>
+            <wavelength>50</wavelength>
+            <tsstart>20</tsstart>
+            <excmode>GAUSS</excmode>
+        </pulse>
+        
+        <pulse>
+            <xpos>70</xpos>
+            <ypos>70</ypos>
+            <wavelength>30</wavelength>
+            <tsstart>60</tsstart>
+            <excmode>GAUSS</excmode>
+        </pulse>
+        
+        <plainwave>
+            <xstart>37</xstart>
+            <ystart>200</ystart>
+            <xend>283</xend>
+            <yend>200</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>50</tsstart>
+        </plainwave>
+        
+        <boundary>
+            <xstart>60</xstart>
+            <ystart>350</ystart>
+            <xend>220</xend>
+            <yend>300</yend>
+            <bcond>ABC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+        
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>37</xstart>
+            <ystart>55</ystart>
+            <xend>283</xend>
+            <yend>55</yend>
+            <bcond>ABC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>37</xstart>
+            <ystart>425</ystart>
+            <xend>283</xend>
+            <yend>425</yend>
+            <bcond>ABC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>37</xstart>
+            <ystart>55</ystart>
+            <xend>37</xend>
+            <yend>425</yend>
+            <bcond>ABC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>283</xstart>
+            <ystart>55</ystart>
+            <xend>283</xend>
+            <yend>425</yend>
+            <bcond>ABC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	</simulation>
+	
+	<simulation>
+    
+		<simtitle>iPad Example</simtitle>
+		<nodesx>296</nodesx>
+		<nodesy>394</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>150</timesteps>
+		<vismode>Hx</vismode>
+        
+        <pulse>
+            <xpos>160</xpos>
+            <ypos>240</ypos>
+            <wavelength>50</wavelength>
+            <tsstart>20</tsstart>
+            <excmode>GAUSS</excmode>
+        </pulse>
+        
+        <pulse>
+            <xpos>70</xpos>
+            <ypos>70</ypos>
+            <wavelength>30</wavelength>
+            <tsstart>60</tsstart>
+            <excmode>GAUSS</excmode>
+        </pulse>
+        
+        <plainwave>
+            <xstart>44</xstart>
+            <ystart>200</ystart>
+            <xend>340</xend>
+            <yend>200</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>50</tsstart>
+        </plainwave>
+        
+        <boundary>
+            <xstart>60</xstart>
+            <ystart>350</ystart>
+            <xend>220</xend>
+            <yend>300</yend>
+            <bcond>ABC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+        
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>44</xstart>
+            <ystart>59</ystart>
+            <xend>340</xend>
+            <yend>59</yend>
+            <bcond>ABC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>44</xstart>
+            <ystart>453</ystart>
+            <xend>340</xend>
+            <yend>453</yend>
+            <bcond>ABC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>44</xstart>
+            <ystart>59</ystart>
+            <xend>44</xend>
+            <yend>453</yend>
+            <bcond>ABC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>340</xstart>
+            <ystart>59</ystart>
+            <xend>340</xend>
+            <yend>453</yend>
+            <bcond>ABC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+	
+    </simulation>
+
+</feed>
