@@ -1,0 +1,20 @@
+CEML (Computational Electromagnetic Markup Language) is an open-source configuration standard for specifying CEM-based simulation enivironments and their contents.
+
+CEML is based upon XML, and therefore simulations are specified via the use of various 'tags' that describe the various elements of any CEM simulation. Currently the following can be specified:
+
+
+Top-level elements:
+----------------------
+
+- Simulation Title
+- Mesh dimensions
+- Simulation length
+- Visualisation mode
+
+Other elements:
+----------------------
+
+- Point sources
+- Plainwaves
+- Arbitrary internal boundaries
+- Edge of mesh boundaries
