@@ -1,173 +1,432 @@
+<!-- *** Made adhering to CEML (Computational Electromagnetic Markup Language) v0.2 *** -->
 
-<!-- *** Examples for the recommended usage and file layout for specifying simulations using CEML *** -->
+<!-- Open-source access to the latest version of CEML: https://github.com/danielrbrowne/CEML -->
 
-<!-- *** (These specific examples are designed with the Loughborough Wave Lab iPhone app in mind) *** -->
-
-<feed>
-
-	<simulation>
-		<simtitle>iPhone Example</simtitle>
-		<nodesx>246</nodesx>
-		<nodesy>370</nodesy>
-		<nodesz>0</nodesz>
-		<timesteps>0</timesteps>
-		<vismode>Ez</vismode>
-        
-        <pulse>
-            <xpos>160</xpos>
-            <ypos>240</ypos>
-            <wavelength>50</wavelength>
-            <tsstart>20</tsstart>
-            <excmode>GAUSS</excmode>
-        </pulse>
-        
-        <pulse>
-            <xpos>70</xpos>
-            <ypos>70</ypos>
-            <wavelength>30</wavelength>
-            <tsstart>60</tsstart>
-            <excmode>GAUSS</excmode>
-        </pulse>
-        
-        <plainwave>
-            <xstart>37</xstart>
-            <ystart>200</ystart>
-            <xend>283</xend>
-            <yend>200</yend>
-            <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
-            <tsstart>50</tsstart>
-        </plainwave>
-        
-        <boundary>
-            <xstart>60</xstart>
-            <ystart>350</ystart>
-            <xend>220</xend>
-            <yend>300</yend>
-            <bcond>ABC</bcond>
-            <meshedge>INTERNAL</meshedge>
-        </boundary>
-        
-        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
-        <boundary>
-            <xstart>37</xstart>
-            <ystart>55</ystart>
-            <xend>283</xend>
-            <yend>55</yend>
-            <bcond>ABC</bcond>
-            <meshedge>TOP</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>37</xstart>
-            <ystart>425</ystart>
-            <xend>283</xend>
-            <yend>425</yend>
-            <bcond>ABC</bcond>
-            <meshedge>BOTTOM</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>37</xstart>
-            <ystart>55</ystart>
-            <xend>37</xend>
-            <yend>425</yend>
-            <bcond>ABC</bcond>
-            <meshedge>LEFT</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>283</xstart>
-            <ystart>55</ystart>
-            <xend>283</xend>
-            <yend>425</yend>
-            <bcond>ABC</bcond>
-            <meshedge>RIGHT</meshedge>
-        </boundary>
-        
-	</simulation>
-	
-	<simulation>
-    
-		<simtitle>iPad Example</simtitle>
-		<nodesx>296</nodesx>
-		<nodesy>394</nodesy>
-		<nodesz>0</nodesz>
-		<timesteps>150</timesteps>
-		<vismode>Hx</vismode>
-        
-        <pulse>
-            <xpos>160</xpos>
-            <ypos>240</ypos>
-            <wavelength>50</wavelength>
-            <tsstart>20</tsstart>
-            <excmode>GAUSS</excmode>
-        </pulse>
-        
-        <pulse>
-            <xpos>70</xpos>
-            <ypos>70</ypos>
-            <wavelength>30</wavelength>
-            <tsstart>60</tsstart>
-            <excmode>GAUSS</excmode>
-        </pulse>
-        
-        <plainwave>
-            <xstart>44</xstart>
-            <ystart>200</ystart>
-            <xend>340</xend>
-            <yend>200</yend>
-            <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
-            <tsstart>50</tsstart>
-        </plainwave>
-        
-        <boundary>
-            <xstart>60</xstart>
-            <ystart>350</ystart>
-            <xend>220</xend>
-            <yend>300</yend>
-            <bcond>ABC</bcond>
-            <meshedge>INTERNAL</meshedge>
-        </boundary>
-        
-        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
-        <boundary>
-            <xstart>44</xstart>
-            <ystart>59</ystart>
-            <xend>340</xend>
-            <yend>59</yend>
-            <bcond>ABC</bcond>
-            <meshedge>TOP</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>44</xstart>
-            <ystart>453</ystart>
-            <xend>340</xend>
-            <yend>453</yend>
-            <bcond>ABC</bcond>
-            <meshedge>BOTTOM</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>44</xstart>
-            <ystart>59</ystart>
-            <xend>44</xend>
-            <yend>453</yend>
-            <bcond>ABC</bcond>
-            <meshedge>LEFT</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>340</xstart>
-            <ystart>59</ystart>
-            <xend>340</xend>
-            <yend>453</yend>
-            <bcond>ABC</bcond>
-            <meshedge>RIGHT</meshedge>
-        </boundary>
-	
-    </simulation>
-
+<!--
+
+Valid Configuration Tags:
+
+    <simulation>    : Top-level configuration tag, all mesh configuration, pulse sources, plainwaves, and boundaries must be configured within this tag
+
+    (N.B: The following should be specified first, outside of pulse sources and boundary definitions):
+    <simtitle>      : Use to give your simulation a meaningful reference name, allowing you to identify amongst the Simulation List
+    <nodesx>        : Number of TLM nodes in the x-direction (246 is the maximum for running on an iPhone, 296 for an iPad)
+    <nodesy>        : Number of TLM nodes in the y-direction (370 is the maximum for running on an iPhone, 394 for an iPad)
+    <nodesz>        : Currently unused in LU Wave Lab, will allow for the possibility of specifying a 3D simulation environment in the future
+    <timesteps>     : Number of timesteps that the simulation will run before pausing automatically ('0' will cause a simulation to run until manual pause by user)
+    <vismode>       : The Visualisation mode to default to on simulation start - Valid values are 'Ez', 'Hx' or 'Hy'
+    
+    Pulse Sources
+    <pulse>         : Top-level tag for a pulse source object
+    <xpos>          : X position in the mesh
+    <ypos>          : Y position in the mesh
+    <wavelength>    : Wavelength in timesteps of the pulse emitted
+    <tsstart>       : The timestep to start the pulse ('0' will start the pulse at the same time as the simulation itself begins)
+    <excmode>       : Pulse excitation mode - Valid values are 'GAUSS' (Gaussian pulse) or 'SIN' (Sinusoidal pulse)
+    
+    Plainwaves (Straight-line array of pulse sources drawn between start and end points):
+    <plainwave>     : Top-level tag for a plainwave object
+    <xstart>        : Starting X position
+    <ystart>        : Starting Y position
+    <xend>          : Ending X position
+    <yend>          : Ending Y position
+    <pwtype>        : Plainwave emission type - Valid values are 'STANDARD' or 'WAVEGUIDE' (Used if specifying a waveguide, amplitude scales the PW output along its length)
+    <wavelength>    : Wavelength in timesteps of the pulse emitted
+    <tsstart>       : The timestep to start the pulse ('0' will start the plainwave at the same time as the simulation itself begins)
+    
+    Boundaries (Straight-line mesh boundaries drawn between start and end points):
+    <boundary>      : Top-level boundary tag for a boundary definition
+    <xstart>        : Starting X position
+    <ystart>        : Starting Y position
+    <xend>          : Ending X position
+    <yend>          : Ending Y position
+    <bcond>         : Boundary condition - Valid values are 'PEC' (Perfect Electric Conductor, a reflective boundary), 'PMC' (Perfect Magnetic Conductor) or 'MTC' (Matched Termination Condition, for simulating pulses propagating to infinity)
+    <meshedge>      : Boundary edge type - Valid values are 'TOP', 'BOTTOM', 'LEFT', 'RIGHT' or 'INTERNAL' (used when specifying an arbitrary internal boundary)
+
+Example Structure:
+Please examine the examples below for the recommended structure of a simulation configuration file.
+
+Notes:
+CEML is currently in a very early development stage - the currently available 'tags' and the recommended structure of a configuration file are subject to change. Full open-source access to the current version of CEML is available at: https://github.com/danielrbrowne/CEML
+
+Feedback:
+Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student within the School of Electronic, Electrical and Systems Engineering at Loughborough University, UK. If you have any suggestions or other feedback for the improvement and expansion of CEML or the Loughborough Wave Lab app, please email: D.R.Browne@lboro.ac.uk
+
+-->
+
+<feed>
+
+	<simulation>
+		<simtitle>Transmission Lines iPhone</simtitle>
+		<nodesx>137</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>570</timesteps>
+		<vismode>Ez</vismode>
+        
+        <plainwave>
+            <xstart>93</xstart>
+            <ystart>424</ystart>
+            <xend>107</xend>
+            <yend>424</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </plainwave>
+
+        <plainwave>
+            <xstart>153</xstart>
+            <ystart>424</ystart>
+            <xend>167</xend>
+            <yend>424</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </plainwave>
+
+        <plainwave>
+            <xstart>213</xstart>
+            <ystart>424</ystart>
+            <xend>227</xend>
+            <yend>424</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </plainwave>
+        
+        <boundary>
+            <xstart>92</xstart>
+            <ystart>60</ystart>
+            <xend>107</xend>
+            <yend>60</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>152</xstart>
+            <ystart>60</ystart>
+            <xend>167</xend>
+            <yend>60</yend>
+            <bcond>PEC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>212</xstart>
+            <ystart>60</ystart>
+            <xend>227</xend>
+            <yend>60</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>92</xstart>
+            <ystart>55</ystart>
+            <xend>92</xend>
+            <yend>425</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>152</xstart>
+            <ystart>55</ystart>
+            <xend>152</xend>
+            <yend>425</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>212</xstart>
+            <ystart>55</ystart>
+            <xend>212</xend>
+            <yend>425</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>92</xstart>
+            <ystart>425</ystart>
+            <xend>107</xend>
+            <yend>425</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>152</xstart>
+            <ystart>425</ystart>
+            <xend>167</xend>
+            <yend>425</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>212</xstart>
+            <ystart>425</ystart>
+            <xend>227</xend>
+            <yend>425</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>107</xstart>
+            <ystart>55</ystart>
+            <xend>107</xend>
+            <yend>425</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>167</xstart>
+            <ystart>55</ystart>
+            <xend>167</xend>
+            <yend>425</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>227</xstart>
+            <ystart>55</ystart>
+            <xend>227</xend>
+            <yend>425</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>37</xstart>
+            <ystart>55</ystart>
+            <xend>283</xend>
+            <yend>55</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>37</xstart>
+            <ystart>425</ystart>
+            <xend>283</xend>
+            <yend>425</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>37</xstart>
+            <ystart>55</ystart>
+            <xend>37</xend>
+            <yend>425</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>283</xstart>
+            <ystart>55</ystart>
+            <xend>283</xend>
+            <yend>425</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	</simulation>
+	
+	<simulation>
+    
+		<simtitle>Transmission Lines iPad</simtitle>
+		<nodesx>137</nodesx>
+		<nodesy>394</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>600</timesteps>
+		<vismode>Hx</vismode>
+        
+        <plainwave>
+            <xstart>125</xstart>
+            <ystart>452</ystart>
+            <xend>139</xend>
+            <yend>452</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </plainwave>
+
+        <plainwave>
+            <xstart>185</xstart>
+            <ystart>452</ystart>
+            <xend>199</xend>
+            <yend>452</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </plainwave>
+
+        <plainwave>
+            <xstart>245</xstart>
+            <ystart>452</ystart>
+            <xend>259</xend>
+            <yend>452</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </plainwave>
+        
+        <boundary>
+            <xstart>124</xstart>
+            <ystart>65</ystart>
+            <xend>139</xend>
+            <yend>65</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>184</xstart>
+            <ystart>65</ystart>
+            <xend>199</xend>
+            <yend>65</yend>
+            <bcond>PEC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>244</xstart>
+            <ystart>65</ystart>
+            <xend>259</xend>
+            <yend>65</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+	  <boundary>
+            <xstart>124</xstart>
+            <ystart>59</ystart>
+            <xend>124</xend>
+            <yend>453</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>184</xstart>
+            <ystart>59</ystart>
+            <xend>184</xend>
+            <yend>453</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>244</xstart>
+            <ystart>59</ystart>
+            <xend>244</xend>
+            <yend>453</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>124</xstart>
+            <ystart>453</ystart>
+            <xend>139</xend>
+            <yend>453</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>184</xstart>
+            <ystart>453</ystart>
+            <xend>199</xend>
+            <yend>453</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>244</xstart>
+            <ystart>453</ystart>
+            <xend>159</xend>
+            <yend>453</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>139</xstart>
+            <ystart>59</ystart>
+            <xend>139</xend>
+            <yend>453</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>199</xstart>
+            <ystart>59</ystart>
+            <xend>199</xend>
+            <yend>453</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>259</xstart>
+            <ystart>59</ystart>
+            <xend>259</xend>
+            <yend>453</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+                
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>44</xstart>
+            <ystart>59</ystart>
+            <xend>340</xend>
+            <yend>59</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>44</xstart>
+            <ystart>453</ystart>
+            <xend>340</xend>
+            <yend>453</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>44</xstart>
+            <ystart>59</ystart>
+            <xend>44</xend>
+            <yend>453</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>340</xstart>
+            <ystart>59</ystart>
+            <xend>340</xend>
+            <yend>453</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+	
+    </simulation>
+
 </feed>
