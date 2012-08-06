@@ -1,4 +1,4 @@
-<!-- *** Made adhering to CEML (Computational Electromagnetic Markup Language) v0.2 *** -->
+<!-- *** Made adhering to CEML (Computational Electromagnetic Markup Language) v0.4 *** -->
 
 <!-- Open-source access to the latest version of CEML: https://github.com/danielrbrowne/CEML -->
 
@@ -58,373 +58,300 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
 
 	<simulation>
 		<simtitle>Transmission Lines iPhone</simtitle>
-		<nodesx>137</nodesx>
+		<nodesx>108</nodesx>
 		<nodesy>370</nodesy>
 		<nodesz>0</nodesz>
 		<timesteps>570</timesteps>
 		<vismode>Ez</vismode>
         
-        <plainwave>
-            <xstart>93</xstart>
-            <ystart>424</ystart>
-            <xend>107</xend>
-            <yend>424</yend>
+        <planewave>
+            <xstart>1</xstart>
+            <ystart>369</ystart>
+            <xend>16</xend>
+            <yend>369</yend>
             <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
+            <wavelength>60</wavelength>
             <tsstart>0</tsstart>
-        </plainwave>
+        </planewave>
 
-        <plainwave>
-            <xstart>153</xstart>
-            <ystart>424</ystart>
-            <xend>167</xend>
-            <yend>424</yend>
+        <planewave>
+            <xstart>47</xstart>
+            <ystart>369</ystart>
+            <xend>61</xend>
+            <yend>369</yend>
             <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
+            <wavelength>60</wavelength>
             <tsstart>0</tsstart>
-        </plainwave>
+        </planewave>
 
-        <plainwave>
-            <xstart>213</xstart>
-            <ystart>424</ystart>
-            <xend>227</xend>
-            <yend>424</yend>
+        <planewave>
+            <xstart>92</xstart>
+            <ystart>369</ystart>
+            <xend>106</xend>
+            <yend>369</yend>
             <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
+            <wavelength>60</wavelength>
             <tsstart>0</tsstart>
-        </plainwave>
+        </planewave>
         
         <boundary>
-            <xstart>92</xstart>
-            <ystart>60</ystart>
-            <xend>107</xend>
-            <yend>60</yend>
+            <xstart>1</xstart>
+            <ystart>5</ystart>
+            <xend>16</xend>
+            <yend>5</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>152</xstart>
-            <ystart>60</ystart>
-            <xend>167</xend>
-            <yend>60</yend>
+            <xstart>46</xstart>
+            <ystart>5</ystart>
+            <xend>61</xend>
+            <yend>5</yend>
             <bcond>PEC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>212</xstart>
-            <ystart>60</ystart>
-            <xend>227</xend>
-            <yend>60</yend>
+            <xstart>91</xstart>
+            <ystart>5</ystart>
+            <xend>106</xend>
+            <yend>5</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>92</xstart>
-            <ystart>55</ystart>
-            <xend>92</xend>
-            <yend>425</yend>
+            <xstart>1</xstart>
+            <ystart>0</ystart>
+            <xend>1</xend>
+            <yend>370</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>152</xstart>
-            <ystart>55</ystart>
-            <xend>152</xend>
-            <yend>425</yend>
+            <xstart>46</xstart>
+            <ystart>0</ystart>
+            <xend>46</xend>
+            <yend>370</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>212</xstart>
-            <ystart>55</ystart>
-            <xend>212</xend>
-            <yend>425</yend>
+            <xstart>91</xstart>
+            <ystart>0</ystart>
+            <xend>91</xend>
+            <yend>370</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>92</xstart>
-            <ystart>425</ystart>
-            <xend>107</xend>
-            <yend>425</yend>
+            <xstart>1</xstart>
+            <ystart>370</ystart>
+            <xend>16</xend>
+            <yend>370</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>152</xstart>
-            <ystart>425</ystart>
-            <xend>167</xend>
-            <yend>425</yend>
+            <xstart>46</xstart>
+            <ystart>370</ystart>
+            <xend>61</xend>
+            <yend>370</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>212</xstart>
-            <ystart>425</ystart>
-            <xend>227</xend>
-            <yend>425</yend>
+            <xstart>91</xstart>
+            <ystart>370</ystart>
+            <xend>106</xend>
+            <yend>370</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>107</xstart>
-            <ystart>55</ystart>
-            <xend>107</xend>
-            <yend>425</yend>
+            <xstart>16</xstart>
+            <ystart>0</ystart>
+            <xend>16</xend>
+            <yend>370</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>167</xstart>
-            <ystart>55</ystart>
-            <xend>167</xend>
-            <yend>425</yend>
+            <xstart>61</xstart>
+            <ystart>0</ystart>
+            <xend>61</xend>
+            <yend>370</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>227</xstart>
-            <ystart>55</ystart>
-            <xend>227</xend>
-            <yend>425</yend>
+            <xstart>106</xstart>
+            <ystart>0</ystart>
+            <xend>106</xend>
+            <yend>370</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
 
-        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
-        <boundary>
-            <xstart>37</xstart>
-            <ystart>55</ystart>
-            <xend>283</xend>
-            <yend>55</yend>
-            <bcond>MTC</bcond>
-            <meshedge>TOP</meshedge>
-        </boundary>
         
-        <boundary>
-            <xstart>37</xstart>
-            <ystart>425</ystart>
-            <xend>283</xend>
-            <yend>425</yend>
-            <bcond>MTC</bcond>
-            <meshedge>BOTTOM</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>37</xstart>
-            <ystart>55</ystart>
-            <xend>37</xend>
-            <yend>425</yend>
-            <bcond>MTC</bcond>
-            <meshedge>LEFT</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>283</xstart>
-            <ystart>55</ystart>
-            <xend>283</xend>
-            <yend>425</yend>
-            <bcond>MTC</bcond>
-            <meshedge>RIGHT</meshedge>
-        </boundary>
         
 	</simulation>
 	
 	<simulation>
     
 		<simtitle>Transmission Lines iPad</simtitle>
-		<nodesx>137</nodesx>
+		<nodesx>136</nodesx>
 		<nodesy>394</nodesy>
 		<nodesz>0</nodesz>
 		<timesteps>600</timesteps>
-		<vismode>Hx</vismode>
+		<vismode>Ez</vismode>
         
-        <plainwave>
-            <xstart>125</xstart>
-            <ystart>452</ystart>
-            <xend>139</xend>
-            <yend>452</yend>
+        <planewave>
+            <xstart>1</xstart>
+            <ystart>393</ystart>
+            <xend>15</xend>
+            <yend>393</yend>
             <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
+            <wavelength>60</wavelength>
             <tsstart>0</tsstart>
-        </plainwave>
+        </planewave>
 
-        <plainwave>
-            <xstart>185</xstart>
-            <ystart>452</ystart>
-            <xend>199</xend>
-            <yend>452</yend>
+        <planewave>
+            <xstart>61</xstart>
+            <ystart>393</ystart>
+            <xend>75</xend>
+            <yend>393</yend>
             <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
+            <wavelength>60</wavelength>
             <tsstart>0</tsstart>
-        </plainwave>
+        </planewave>
 
-        <plainwave>
-            <xstart>245</xstart>
-            <ystart>452</ystart>
-            <xend>259</xend>
-            <yend>452</yend>
+        <planewave>
+            <xstart>121</xstart>
+            <ystart>393</ystart>
+            <xend>135</xend>
+            <yend>393</yend>
             <pwtype>STANDARD</pwtype>
-            <wavelength>30</wavelength>
+            <wavelength>60</wavelength>
             <tsstart>0</tsstart>
-        </plainwave>
+        </planewave>
         
         <boundary>
-            <xstart>124</xstart>
-            <ystart>65</ystart>
-            <xend>139</xend>
-            <yend>65</yend>
+            <xstart>0</xstart>
+            <ystart>5</ystart>
+            <xend>15</xend>
+            <yend>5</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>184</xstart>
-            <ystart>65</ystart>
-            <xend>199</xend>
-            <yend>65</yend>
+            <xstart>60</xstart>
+            <ystart>5</ystart>
+            <xend>75</xend>
+            <yend>5</yend>
             <bcond>PEC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>244</xstart>
-            <ystart>65</ystart>
-            <xend>259</xend>
-            <yend>65</yend>
+            <xstart>120</xstart>
+            <ystart>5</ystart>
+            <xend>135</xend>
+            <yend>5</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
 	  <boundary>
-            <xstart>124</xstart>
-            <ystart>59</ystart>
-            <xend>124</xend>
-            <yend>453</yend>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>394</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>184</xstart>
-            <ystart>59</ystart>
-            <xend>184</xend>
-            <yend>453</yend>
+            <xstart>60</xstart>
+            <ystart>0</ystart>
+            <xend>60</xend>
+            <yend>394</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>244</xstart>
-            <ystart>59</ystart>
-            <xend>244</xend>
-            <yend>453</yend>
+            <xstart>120</xstart>
+            <ystart>0</ystart>
+            <xend>120</xend>
+            <yend>394</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>124</xstart>
-            <ystart>453</ystart>
-            <xend>139</xend>
-            <yend>453</yend>
+            <xstart>0</xstart>
+            <ystart>394</ystart>
+            <xend>15</xend>
+            <yend>394</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>184</xstart>
-            <ystart>453</ystart>
-            <xend>199</xend>
-            <yend>453</yend>
+            <xstart>60</xstart>
+            <ystart>394</ystart>
+            <xend>75</xend>
+            <yend>394</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>244</xstart>
-            <ystart>453</ystart>
-            <xend>159</xend>
-            <yend>453</yend>
+            <xstart>120</xstart>
+            <ystart>394</ystart>
+            <xend>135</xend>
+            <yend>394</yend>
             <bcond>MTC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>139</xstart>
-            <ystart>59</ystart>
-            <xend>139</xend>
-            <yend>453</yend>
+            <xstart>15</xstart>
+            <ystart>0</ystart>
+            <xend>15</xend>
+            <yend>394</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>199</xstart>
-            <ystart>59</ystart>
-            <xend>199</xend>
-            <yend>453</yend>
+            <xstart>75</xstart>
+            <ystart>0</ystart>
+            <xend>75</xend>
+            <yend>394</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
         </boundary>
 
         <boundary>
-            <xstart>259</xstart>
-            <ystart>59</ystart>
-            <xend>259</xend>
-            <yend>453</yend>
+            <xstart>135</xstart>
+            <ystart>0</ystart>
+            <xend>135</xend>
+            <yend>394</yend>
             <bcond>PMC</bcond>
             <meshedge>INTERNAL</meshedge>
-        </boundary>
-
-                
-        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
-        <boundary>
-            <xstart>44</xstart>
-            <ystart>59</ystart>
-            <xend>340</xend>
-            <yend>59</yend>
-            <bcond>MTC</bcond>
-            <meshedge>TOP</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>44</xstart>
-            <ystart>453</ystart>
-            <xend>340</xend>
-            <yend>453</yend>
-            <bcond>MTC</bcond>
-            <meshedge>BOTTOM</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>44</xstart>
-            <ystart>59</ystart>
-            <xend>44</xend>
-            <yend>453</yend>
-            <bcond>MTC</bcond>
-            <meshedge>LEFT</meshedge>
-        </boundary>
-        
-        <boundary>
-            <xstart>340</xstart>
-            <ystart>59</ystart>
-            <xend>340</xend>
-            <yend>453</yend>
-            <bcond>MTC</bcond>
-            <meshedge>RIGHT</meshedge>
         </boundary>
 	
     </simulation>
