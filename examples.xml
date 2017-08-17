@@ -94,7 +94,14 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <tsstart>0</tsstart>
         </planewave>
         
-        <boundary>
+        <circleboundary>
+		<x>100</x>
+		<y>100</y>
+		<radius>20</radius>
+		<bcond>PEC</bcond>
+	</circleboundary>
+	
+	<boundary>
             <xstart>1</xstart>
             <ystart>5</ystart>
             <xend>16</xend>
