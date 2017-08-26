@@ -1,0 +1,1126 @@
+<feed>
+	
+	<simulation>
+		<simtitle>Transmission Lines iPhone</simtitle>
+		<nodesx>108</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>570</timesteps>
+		<vismode>Ez</vismode>
+        
+        <planewave>
+            <xstart>1</xstart>
+            <ystart>369</ystart>
+            <xend>16</xend>
+            <yend>369</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>60</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+
+        <planewave>
+            <xstart>47</xstart>
+            <ystart>369</ystart>
+            <xend>61</xend>
+            <yend>369</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>60</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+
+        <planewave>
+            <xstart>92</xstart>
+            <ystart>369</ystart>
+            <xend>106</xend>
+            <yend>369</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>60</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+        
+        <boundary>
+            <xstart>1</xstart>
+            <ystart>5</ystart>
+            <xend>16</xend>
+            <yend>5</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>46</xstart>
+            <ystart>5</ystart>
+            <xend>61</xend>
+            <yend>5</yend>
+            <bcond>PEC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>91</xstart>
+            <ystart>5</ystart>
+            <xend>106</xend>
+            <yend>5</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>1</xstart>
+            <ystart>0</ystart>
+            <xend>1</xend>
+            <yend>370</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>46</xstart>
+            <ystart>0</ystart>
+            <xend>46</xend>
+            <yend>370</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>91</xstart>
+            <ystart>0</ystart>
+            <xend>91</xend>
+            <yend>370</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>1</xstart>
+            <ystart>370</ystart>
+            <xend>16</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>46</xstart>
+            <ystart>370</ystart>
+            <xend>61</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>91</xstart>
+            <ystart>370</ystart>
+            <xend>106</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>16</xstart>
+            <ystart>0</ystart>
+            <xend>16</xend>
+            <yend>370</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>61</xstart>
+            <ystart>0</ystart>
+            <xend>61</xend>
+            <yend>370</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>106</xstart>
+            <ystart>0</ystart>
+            <xend>106</xend>
+            <yend>370</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+
+        
+        
+	</simulation>
+	
+	<simulation>
+    
+		<simtitle>Transmission Lines iPad</simtitle>
+		<nodesx>136</nodesx>
+		<nodesy>394</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>600</timesteps>
+		<vismode>Ez</vismode>
+        
+        <planewave>
+            <xstart>1</xstart>
+            <ystart>393</ystart>
+            <xend>15</xend>
+            <yend>393</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>60</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+
+        <planewave>
+            <xstart>61</xstart>
+            <ystart>393</ystart>
+            <xend>75</xend>
+            <yend>393</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>60</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+
+        <planewave>
+            <xstart>121</xstart>
+            <ystart>393</ystart>
+            <xend>135</xend>
+            <yend>393</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>60</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>5</ystart>
+            <xend>15</xend>
+            <yend>5</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>60</xstart>
+            <ystart>5</ystart>
+            <xend>75</xend>
+            <yend>5</yend>
+            <bcond>PEC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>120</xstart>
+            <ystart>5</ystart>
+            <xend>135</xend>
+            <yend>5</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+	  <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>394</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>60</xstart>
+            <ystart>0</ystart>
+            <xend>60</xend>
+            <yend>394</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>120</xstart>
+            <ystart>0</ystart>
+            <xend>120</xend>
+            <yend>394</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>394</ystart>
+            <xend>15</xend>
+            <yend>394</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>60</xstart>
+            <ystart>394</ystart>
+            <xend>75</xend>
+            <yend>394</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>120</xstart>
+            <ystart>394</ystart>
+            <xend>135</xend>
+            <yend>394</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>15</xstart>
+            <ystart>0</ystart>
+            <xend>15</xend>
+            <yend>394</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>75</xstart>
+            <ystart>0</ystart>
+            <xend>75</xend>
+            <yend>394</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+
+        <boundary>
+            <xstart>135</xstart>
+            <ystart>0</ystart>
+            <xend>135</xend>
+            <yend>394</yend>
+            <bcond>PMC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+	
+    </simulation>
+	
+	
+	
+	
+	<simulation>
+		<simtitle>Two Point Sources</simtitle>
+		<nodesx>246</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+		
+		<pulse>
+            <xpos>123</xpos>
+            <ypos>155</ypos>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+			<excmode>SIN</excmode>
+        </pulse>
+		
+		<pulse>
+            <xpos>123</xpos>
+            <ypos>215</ypos>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+			<excmode>SIN</excmode>
+        </pulse>
+
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>246</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>246</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>246</xstart>
+            <ystart>0</ystart>
+            <xend>246</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+
+	  
+	  
+	  <simulation>
+		<simtitle>Half Planewave</simtitle>
+		<nodesx>270</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+        
+        
+		<planewave>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		
+		
+		
+		<boundary>
+            <xstart>135</xstart>
+            <ystart>15</ystart>
+            <xend>270</xend>
+            <yend>15</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+
+	  
+	  
+	  <simulation>
+		<simtitle>Baffled Piston</simtitle>
+		<nodesx>270</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>400</timesteps>
+		<vismode>Ez</vismode>
+        
+        
+		<planewave>
+            <xstart>1</xstart>
+            <ystart>150</ystart>
+            <xend>1</xend>
+            <yend>220</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>149</ystart>
+            <xend>15</xend>
+            <yend>149</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>15</xstart>
+            <ystart>0</ystart>
+            <xend>15</xend>
+            <yend>149</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>221</ystart>
+            <xend>15</xend>
+            <yend>221</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		
+		<boundary>
+            <xstart>15</xstart>
+            <ystart>221</ystart>
+            <xend>15</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+
+	  
+	  
+	  <simulation>
+		<simtitle>High Pass (Pass-band)</simtitle>
+		<nodesx>270</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+        
+        
+		<planewave>
+            <xstart>135</xstart>
+            <ystart>20</ystart>
+            <xend>135</xend>
+            <yend>20</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>45</ystart>
+            <xend>115</xend>
+            <yend>45</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>65</ystart>
+            <xend>115</xend>
+            <yend>65</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>85</ystart>
+            <xend>115</xend>
+            <yend>85</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>105</ystart>
+            <xend>115</xend>
+            <yend>105</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>125</ystart>
+            <xend>115</xend>
+            <yend>125</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>145</ystart>
+            <xend>115</xend>
+            <yend>145</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		
+		
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>45</ystart>
+            <xend>270</xend>
+            <yend>45</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>65</ystart>
+            <xend>270</xend>
+            <yend>65</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>85</ystart>
+            <xend>270</xend>
+            <yend>85</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>105</ystart>
+            <xend>270</xend>
+            <yend>105</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>125</ystart>
+            <xend>270</xend>
+            <yend>125</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>145</ystart>
+            <xend>270</xend>
+            <yend>145</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		
+
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+	  
+	  
+	  
+	  <simulation>
+		<simtitle>High Pass (Attenuating)</simtitle>
+		<nodesx>270</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+        
+        
+		<planewave>
+            <xstart>135</xstart>
+            <ystart>20</ystart>
+            <xend>135</xend>
+            <yend>20</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>90</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>45</ystart>
+            <xend>115</xend>
+            <yend>45</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>65</ystart>
+            <xend>115</xend>
+            <yend>65</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>85</ystart>
+            <xend>115</xend>
+            <yend>85</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>105</ystart>
+            <xend>115</xend>
+            <yend>105</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>125</ystart>
+            <xend>115</xend>
+            <yend>125</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>0</xstart>
+            <ystart>145</ystart>
+            <xend>115</xend>
+            <yend>145</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		
+		
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>45</ystart>
+            <xend>270</xend>
+            <yend>45</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>65</ystart>
+            <xend>270</xend>
+            <yend>65</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>85</ystart>
+            <xend>270</xend>
+            <yend>85</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>105</ystart>
+            <xend>270</xend>
+            <yend>105</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>125</ystart>
+            <xend>270</xend>
+            <yend>125</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		<boundary>
+            <xstart>155</xstart>
+            <ystart>145</ystart>
+            <xend>270</xend>
+            <yend>145</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		
+
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+
+	  
+	  
+	  <simulation>
+		<simtitle>Intersecting Planes</simtitle>
+		<nodesx>270</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+        
+        
+		<planewave>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		<planewave>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>95</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		
+		
+
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+
+	  
+	  
+	  <simulation>
+		<simtitle>Edge Diffraction</simtitle>
+		<nodesx>270</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+        
+        
+		<planewave>
+            <xstart>5</xstart>
+            <ystart>365</ystart>
+            <xend>5</xend>
+            <yend>365</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		
+       
+		
+		<boundary>
+            <xstart>135</xstart>
+            <ystart>325</ystart>
+            <xend>135</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		
+		
+		
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+
+	  
+	  
+	  <simulation>
+		<simtitle>Obstacle</simtitle>
+		<nodesx>270</nodesx>
+		<nodesy>370</nodesy>
+		<nodesz>0</nodesz>
+		<timesteps>0</timesteps>
+		<vismode>Ez</vismode>
+        
+        
+		<planewave>
+            <xstart>135</xstart>
+            <ystart>1</ystart>
+            <xend>135</xend>
+            <yend>1</yend>
+            <pwtype>STANDARD</pwtype>
+            <wavelength>30</wavelength>
+            <tsstart>0</tsstart>
+        </planewave>
+		
+		
+       
+		
+		<boundary>
+            <xstart>105</xstart>
+            <ystart>45</ystart>
+            <xend>165</xend>
+            <yend>45</yend>
+            <bcond>MTC</bcond>
+            <meshedge>INTERNAL</meshedge>
+        </boundary>
+		
+		
+		
+		
+     
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>270</xstart>
+            <ystart>0</ystart>
+            <xend>270</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+	  </simulation>
+        
+</feed>
