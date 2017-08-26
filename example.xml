@@ -1,3 +1,59 @@
+<!-- *** Made adhering to CEML (Computational Electromagnetic Markup Language) v0.4 *** -->
+
+<!-- Open-source access to the latest version of CEML: https://github.com/danielrbrowne/CEML -->
+
+<!--
+
+Valid Configuration Tags:
+
+    <simulation>    : Top-level configuration tag, all mesh configuration, pulse sources, plainwaves, and boundaries must be configured within this tag
+
+    (N.B: The following should be specified first, outside of pulse sources and boundary definitions):
+    <simtitle>      : Use to give your simulation a meaningful reference name, allowing you to identify amongst the Simulation List
+    <nodesx>        : Number of TLM nodes in the x-direction (246 is the maximum for running on an iPhone, 296 for an iPad)
+    <nodesy>        : Number of TLM nodes in the y-direction (370 is the maximum for running on an iPhone, 394 for an iPad)
+    <nodesz>        : Currently unused in LU Wave Lab, will allow for the possibility of specifying a 3D simulation environment in the future
+    <timesteps>     : Number of timesteps that the simulation will run before pausing automatically ('0' will cause a simulation to run until manual pause by user)
+    <vismode>       : The Visualisation mode to default to on simulation start - Valid values are 'Ez', 'Hx' or 'Hy'
+    
+    Pulse Sources
+    <pulse>         : Top-level tag for a pulse source object
+    <xpos>          : X position in the mesh
+    <ypos>          : Y position in the mesh
+    <wavelength>    : Wavelength in timesteps of the pulse emitted
+    <tsstart>       : The timestep to start the pulse ('0' will start the pulse at the same time as the simulation itself begins)
+    <excmode>       : Pulse excitation mode - Valid values are 'GAUSS' (Gaussian pulse) or 'SIN' (Sinusoidal pulse)
+    
+    Plainwaves (Straight-line array of pulse sources drawn between start and end points):
+    <plainwave>     : Top-level tag for a plainwave object
+    <xstart>        : Starting X position
+    <ystart>        : Starting Y position
+    <xend>          : Ending X position
+    <yend>          : Ending Y position
+    <pwtype>        : Plainwave emission type - Valid values are 'STANDARD' or 'WAVEGUIDE' (Used if specifying a waveguide, amplitude scales the PW output along its length)
+    <wavelength>    : Wavelength in timesteps of the pulse emitted
+    <tsstart>       : The timestep to start the pulse ('0' will start the plainwave at the same time as the simulation itself begins)
+    
+    Boundaries (Straight-line mesh boundaries drawn between start and end points):
+    <boundary>      : Top-level boundary tag for a boundary definition
+    <xstart>        : Starting X position
+    <ystart>        : Starting Y position
+    <xend>          : Ending X position
+    <yend>          : Ending Y position
+    <bcond>         : Boundary condition - Valid values are 'PEC' (Perfect Electric Conductor, a reflective boundary), 'PMC' (Perfect Magnetic Conductor) or 'MTC' (Matched Termination Condition, for simulating pulses propagating to infinity)
+    <meshedge>      : Boundary edge type - Valid values are 'TOP', 'BOTTOM', 'LEFT', 'RIGHT' or 'INTERNAL' (used when specifying an arbitrary internal boundary)
+
+Example Structure:
+Please examine the examples below for the recommended structure of a simulation configuration file.
+
+Notes:
+CEML is currently in a very early development stage - the currently available 'tags' and the recommended structure of a configuration file are subject to change. Full open-source access to the current version of CEML is available at: https://github.com/danielrbrowne/CEML
+
+Feedback:
+Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student within the School of Electronic, Electrical and Systems Engineering at Loughborough University, UK. If you have any suggestions or other feedback for the improvement and expansion of CEML or the Loughborough Wave Lab app, please email: D.R.Browne@lboro.ac.uk
+
+-->
+
 <feed>
 	
 	<simulation>
