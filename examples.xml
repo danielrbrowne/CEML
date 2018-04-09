@@ -466,10 +466,10 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
         <beziercurveboundary>
             <p0_xpos>50</p0_xpos>
             <p0_ypos>200</p0_ypos>
-            <p1_xpos>150</p1_xpos>
-            <p1_ypos>210</p1_ypos>
+            <p1_xpos>100</p1_xpos>
+            <p1_ypos>250</p1_ypos>
             <p2_xpos>200</p2_xpos>
-            <p2_ypos>220</p2_ypos>
+            <p2_ypos>300</p2_ypos>
             <bcond>PEC</bcond>
         </beziercurveboundary>
 
