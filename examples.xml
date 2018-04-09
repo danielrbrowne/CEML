@@ -448,13 +448,20 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <excmode>SIN</excmode>
         </pulse>
 
-     
         <circleboundary>
             <xpos>200</xpos>
             <ypos>200</ypos>
             <radius>20</radius>
             <bcond>PEC</bcond>
         </circleboundary>
+
+        <elipseboundary>
+            <xpos>100</xpos>
+            <ypos>200</ypos>
+            <semi-major>40</semi-major>
+            <semi-minor>20</semi-minor>
+            <bcond>PEC</bcond>
+        </elipseboundary>
 
 
         <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
