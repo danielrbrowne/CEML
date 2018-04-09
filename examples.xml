@@ -422,7 +422,79 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <meshedge>RIGHT</meshedge>
         </boundary>
         
-	  </simulation>
+	</simulation>
+
+    <simulation>
+        <simtitle>Conical Sections</simtitle>
+        <nodesx>246</nodesx>
+        <nodesy>370</nodesy>
+        <nodesz>0</nodesz>
+        <timesteps>0</timesteps>
+        <vismode>Ez</vismode>
+        
+        <pulse>
+            <xpos>123</xpos>
+            <ypos>155</ypos>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+            <excmode>SIN</excmode>
+        </pulse>
+        
+        <pulse>
+            <xpos>123</xpos>
+            <ypos>215</ypos>
+            <wavelength>35</wavelength>
+            <tsstart>0</tsstart>
+            <excmode>SIN</excmode>
+        </pulse>
+
+     
+        <circleboundary>
+            <xpos>200</xpos>
+            <ypos>200</ypos>
+            <radius>20</radius>
+            <bcond>PEC</bcond>
+        </circleboundary>
+
+
+        <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>246</xend>
+            <yend>0</yend>
+            <bcond>MTC</bcond>
+            <meshedge>TOP</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>370</ystart>
+            <xend>246</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>BOTTOM</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>0</xstart>
+            <ystart>0</ystart>
+            <xend>0</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>LEFT</meshedge>
+        </boundary>
+        
+        <boundary>
+            <xstart>246</xstart>
+            <ystart>0</ystart>
+            <xend>246</xend>
+            <yend>370</yend>
+            <bcond>MTC</bcond>
+            <meshedge>RIGHT</meshedge>
+        </boundary>
+        
+    </simulation>
 
 	  
 	  
