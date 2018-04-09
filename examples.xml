@@ -456,7 +456,7 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
         </circleboundary>
 
         <elipseboundary>
-            <xpos>100</xpos>
+            <xpos>80</xpos>
             <ypos>200</ypos>
             <semi-major>40</semi-major>
             <semi-minor>20</semi-minor>
