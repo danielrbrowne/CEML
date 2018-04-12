@@ -482,7 +482,7 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <bcond>PEC</bcond>
         </parabolaboundary>
 
-        <parabolaboundary>
+        <hyperbolaboundary>
             <xpos>50</xpos>
             <ypos>200</ypos>
             <a>2</a>
@@ -490,7 +490,7 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <axissymmetry>XPOSITIVE</axissymmetry>
             <axisbound>75</axisbound>
             <bcond>PEC</bcond>
-        </parabolaboundary>
+        </hyperbolaboundary>
 
 
         <!-- Edge boundaries: take note of the start and end coordinates - these match with the included simulation modes within the app! -->
