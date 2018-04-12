@@ -478,6 +478,7 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <ypos>200</ypos>
             <p>3</p>
             <axissymmetry>XPOSITIVE</axissymmetry>
+            <axisbound>75</axisbound>
             <bcond>PEC</bcond>
         </parabolaboundary>
 
@@ -487,6 +488,7 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <a>2</a>
             <b>3</b>
             <axissymmetry>XPOSITIVE</axissymmetry>
+            <axisbound>75</axisbound>
             <bcond>PEC</bcond>
         </parabolaboundary>
 
