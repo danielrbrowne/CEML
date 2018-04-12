@@ -482,12 +482,69 @@ Loughborough Wave Lab and CEML are developed by Dan Browne, a Ph.D. student with
             <bcond>PEC</bcond>
         </parabolaboundary>
 
+        <parabolaboundary>
+            <xpos>200</xpos>
+            <ypos>200</ypos>
+            <p>3</p>
+            <axissymmetry>XNEGATIVE</axissymmetry>
+            <axisbound>75</axisbound>
+            <bcond>PEC</bcond>
+        </parabolaboundary>
+
+        <parabolaboundary>
+            <xpos>200</xpos>
+            <ypos>200</ypos>
+            <p>3</p>
+            <axissymmetry>YPOSITIVE</axissymmetry>
+            <axisbound>75</axisbound>
+            <bcond>PEC</bcond>
+        </parabolaboundary>
+
+        <parabolaboundary>
+            <xpos>200</xpos>
+            <ypos>200</ypos>
+            <p>3</p>
+            <axissymmetry>YNEGATIVE</axissymmetry>
+            <axisbound>75</axisbound>
+            <bcond>PEC</bcond>
+        </parabolaboundary>
+
         <hyperbolaboundary>
             <xpos>125</xpos>
             <ypos>200</ypos>
             <a>2</a>
             <b>3</b>
             <axissymmetry>XPOSITIVE</axissymmetry>
+            <axisbound>75</axisbound>
+            <bcond>PEC</bcond>
+        </hyperbolaboundary>
+
+        <hyperbolaboundary>
+            <xpos>125</xpos>
+            <ypos>200</ypos>
+            <a>2</a>
+            <b>3</b>
+            <axissymmetry>XNEGATIVE</axissymmetry>
+            <axisbound>75</axisbound>
+            <bcond>PEC</bcond>
+        </hyperbolaboundary>
+
+        <hyperbolaboundary>
+            <xpos>125</xpos>
+            <ypos>200</ypos>
+            <a>2</a>
+            <b>3</b>
+            <axissymmetry>YPOSITIVE</axissymmetry>
+            <axisbound>75</axisbound>
+            <bcond>PEC</bcond>
+        </hyperbolaboundary>
+
+        <hyperbolaboundary>
+            <xpos>125</xpos>
+            <ypos>200</ypos>
+            <a>2</a>
+            <b>3</b>
+            <axissymmetry>YNEGATIVE</axissymmetry>
             <axisbound>75</axisbound>
             <bcond>PEC</bcond>
         </hyperbolaboundary>
